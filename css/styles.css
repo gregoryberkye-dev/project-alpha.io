@@ -1,0 +1,113 @@
+body{
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 0;
+  height: 100vh;
+}
+.container{
+  height: 95vh;
+}
+.container h1{
+  text-align: center;
+  padding: 0 10px;
+}
+.input{
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 0;
+}
+.message{
+  text-align: center;
+  font-weight: 800;
+  padding: 10px;
+  width: 70%;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  opacity: 0;
+}
+.error{
+  background: rgba(255,0,0,.2);
+  color: red;
+  opacity: 1;
+}
+.success{
+  background: rgba(0,255,0,.2);
+  color: green;
+  opacity: 1;
+}
+
+.input input{
+  width: 70%;
+  height: 60px;
+  padding: 10px 20px;
+  border: 0;
+  box-shadow: 0 0 1px;
+  border-radius: 20px;
+}
+input::placeholder{
+  text-decoration: capitalize; 
+}
+.button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.button button{
+  padding: 10px;
+  width: 60%;
+  border-radius:10px;
+  border:0;
+  background: blue;
+  color: white;
+  font-weight: 800;
+}
+.button button:hover{
+  background: rgba(00,00,255,.8);
+  transition: .3s all ease-in-out;
+}
+.fa-save{
+  font-size: 20px;
+}
+
+.saved-notes{
+  height:500px ;
+  padding: 10px;
+}
+.notes{
+  height: 85%;
+  overflow: scroll;
+}
+.note{
+  box-shadow: 0 0 1px;
+  display: flex;
+  align-items: center;
+  border: 0.6px solid gray;
+  border-radius: 6px;
+  padding: 10px;
+  font-weight: 600;
+  position: relative;
+  margin-bottom: 10px;
+}
+.note .content{
+  width:85%;
+  min-height: 50px;
+  max-height: 120px;
+  overflow: scroll;
+}
+.note button{
+  margin-left: 5px;
+  padding: 8px 6px;
+  border-radius: 10px;
+  border: 0;
+  background: red;
+  color: white;
+  font-weight: 800;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
