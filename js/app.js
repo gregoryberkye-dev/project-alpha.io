@@ -1,4 +1,4 @@
-function validate(){
+ function validate(){
   let input = document.querySelector("input")
   if(input.value.trim() == "" || !input.value){
     return false
@@ -6,6 +6,7 @@ function validate(){
   else return true
 }
 
+let data = []
 function saveNote(){
   let valid = validate()
   let message =""
@@ -19,7 +20,6 @@ function saveNote(){
     message = "Note saved"
     messageBox.classList.add("success")
 
-    let data = []
     let note = {
       id : Math.floor(Math.random() * 1000000),
       message : input.value,
@@ -48,10 +48,19 @@ function retriveNote(){
           <p class="content">
           ${i.message}
           </p>
-          <button>Delete</button>
+          <button onclick="deleteNote(${i.id})">Delete</button>
         </div>
         `
-  })
+  }).join("")
   noteBox.innerHTML = note
   
+}
+
+retriveNote()
+
+function deleteNote(id){
+  let notes = JSON.parse(localStorage.getItem("notes") || [])
+  let newNote = notes.filter(i=> i.id !== id)
+  localStorage.setItem('notes', JSON.stringify(newNote))
+  retriveNote()
 }
