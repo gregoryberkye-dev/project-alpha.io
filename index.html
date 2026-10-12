@@ -10,23 +10,16 @@
 <body>
 
   <div class="container">
-    <h1>Notes</h1>
+    <div class="header">
+      <h1>Notes</h1>
+      <button onclick="navigatePage('new-note.html')"><i class="fa fa-plus"></i></button>
+    </div>
     <hr>
     
-   <div class="input">
-     <div class="message">hi</div>
-     <input type="text" placeholder="Write Your Notes Here"/>
-   </div>
-    <div class="button">
-      <button onclick="saveNote()">
-      <i class="fa fa-save"></i>
-        Save Note
-      </button>
-    </div>
+
     <div class="saved-notes">
-      <h2>Saved Notes</h2>
-      <div class="notes">
         
+      <div class="notes">
       </div>
     </div>
   </div>
